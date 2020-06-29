@@ -1,0 +1,45 @@
+<ngb-alert [type]="alertType" *ngIf="hasAlert" (close)="close()">{{ alertMessage }}</ngb-alert>
+
+  <div class="submit-form">
+    <form [formGroup]="dataForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label >Year</label>
+        <input
+          type="text"
+          formControlName="year" 
+          class="form-control"
+          required
+          placeholder="2010"
+          [ngClass]="{ 'is-invalid': submitted && f.year.errors }" />
+      </div>
+  
+      <div class="form-group">
+        <label >Mileage</label>
+        <input
+          class="form-control"
+          type="text"
+          required
+          placeholder="23000"
+          formControlName="mileage" 
+          [ngClass]="{ 'is-invalid': submitted && f.mileage.errors }" />
+        
+      </div>
+ 
+      <button class="btn btn-primary" type="submit">Submit</button>
+
+      <button class="btn btn-primary" (click)="clearFields()" >Clear</button>
+        
+    </form>
+    
+    <div *ngIf="gotResult">
+        <div class="list row">
+        <h4 >Predicted Fault: {{predictedFault}} </h4>
+        <img [src]="image">
+    </div>
+    </div>
+
+
+
+    <ngx-spinner></ngx-spinner>
+
+  </div>

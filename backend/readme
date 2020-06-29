@@ -1,0 +1,25 @@
+    Install Python 3 stable version
+
+    Install “pip” package by downloading with following url
+    https://bootstrap.pypa.io/get-pip.py
+
+    Update pip and setup tools — `pip install — upgrade pip setuptools`
+
+    pip install virtualenv
+
+    pip install Flask
+    
+    pip install flask flask-jsonpify flask-sqlalchemy flask-restful flask_cors
+
+    pip install -U scikit-learn
+
+    pip install sklearn pandas matplotlib
+    
+    
+
+    
+    finally open server.py and execute it then the backend will be accessible at port : 5002
+
+    can be checked by entering following url in the browser address bar
+
+    
